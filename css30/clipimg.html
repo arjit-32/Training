@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Clip Images</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+
+<style type="text/css">
+.clip-image-1{
+	-webkit-clip-path: circle(50% at 50% 50%);	
+}
+
+.clip-image-2{
+	clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+}
+.clip-image-3{
+	clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+.clip-image-4{
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+</style>
+</head>
+
+<body>
+	<h1>Clipping Images</h1>
+	<hr>
+	<h4>Example 1</h4>
+		<img src="https://unsplash.it/300/300?image=1000" alt="" class="clip-image-1"/>
+	<h4>Example 2</h4>
+		<img src="https://unsplash.it/300/300?image=1005" alt="" class="clip-image-2"/>
+	<h4>Example 3</h4>
+		<img src="https://unsplash.it/300/300?image=1002" alt="" class="clip-image-3"/>
+	<h4>Example 4</h4>
+		<img src="https://unsplash.it/300/300?image=1003" alt="" class="clip-image-4"/>
+
+</body>
+</html>
+

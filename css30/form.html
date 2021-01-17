@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Form</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style type="text/css">
+
+
+.form-wrapper{
+	background: #0F2027; 
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+	position: relative;
+	z-index: 3;
+	padding: 100px;
+	width: 300px;
+	margin: 0 auto;
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+	border-radius: 5px;
+}
+
+.form-wrapper *{
+	box-sizing: border-box;
+}
+
+.form-wrapper input{
+	display: inline-block;
+	width: 100%;
+	padding: 0 20px;
+	line-height: 50px;
+	height: 50px;
+	background: white;
+	border: 1px solid #e6e6e6;
+	border-bottom-width: 3px;
+	border-radius: 5px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	outline: none;
+	font-family: inherit;
+}
+
+.form-wrapper input:not(:last-child){
+	margin-bottom: 20px;
+}
+
+.form-wrapper input[type="submit"]{
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	padding: 0 20px;
+	background-size: 100%;
+	background-color: #493240;
+	color: white;
+}
+.form-block p{
+	font-size: 12px;
+}
+.form-title {
+	position: absolute;
+	top: 15px;
+}
+.form-title::after{
+	content: "";
+	display: block;
+	width:100%;
+	height: 10px;
+	background-color: orange;
+}
+</style>
+</head>
+
+<body>
+	<h1>Sexy Registration Form</h1>
+	<hr>
+	<div class="form-wrapper">
+		<div class="form-block">
+		<h3 class="form-title">Create an account</h3>
+		<p>Quickly &amp; easily create an account using the form below</p>
+		<form action="#">
+			<input type="email" placeholder="Enter your email">
+			<input type="password" placeholder="Enter your password">
+			<input type="submit" value="Create my account">
+		</form>
+		</div>
+	</div>
+</body>
+</html>
+
