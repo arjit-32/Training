@@ -6,9 +6,10 @@
 	<title>Print Specific Styles</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Luckiest+Guy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
 <style type="text/css">
-	/*STYLING DOCUMENT*/
+	/*STYLING DOCUMENT - Mocked code college website for practise*/
 	*{
 		margin: 0;
 		padding: 0;
@@ -45,6 +46,10 @@
 		background: url('https://www.filepicker.io/api/file/Q9U24hZPSFaL5oZ65Ioj') repeat;
 		background-size: 25%;
 		color: white;
+		border-bottom: 10px solid #ffde01;
+	}
+	.navigation-wrapper{
+		padding-top: 10px;
 	}
 	.navigation{
 		width: 80vw;
@@ -59,12 +64,93 @@
 		text-decoration: none;
 		color: white;
 	}
-	
+	.landing{
+		height: 75vh;
+		width: 50vw;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.landing-content{
+		text-align: center;
+		vertical-align: middle;
+	}
+	.landing-content h1{
+		text-transform: uppercase;
+		font-size: 4rem;
+		font-family: 'Luckiest Guy', cursive;
+	}
+	.landing-content h2{
+		font-size: 1.8rem;
+		font-family: 'Caveat', cursive;
+	}
+	.landing-content #landing-button{
+		padding: 15px;
+		color: 
+		border: 1px solid #ffde01;
+		border-radius: 5px;
+		margin: 20px 0;
+		display: inline-block;
+		text-decoration: none;
+		font-family: 'Coda Caption', sans-serif;
+		color: #353535;
+		text-transform: uppercase;
+		background-color: #ffde01;
+		font-size: 2rem;
+	}
+	.landing-content #login-button{
+		display:block;
+		text-decoration: none;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 0.9rem;
+		color: white;
+		text-transform: uppercase;
+	}
+
+	/*Print specific styling*/
+	@media print{
+		.advertisement,
+		.navigation-wrapper,
+		#landing-button,
+		#login-button,
+		a{
+			display: none;
+		}
+
+		/* Global typography reset */
+		body{
+			font-family: serif;
+			font-size: 16pt;
+			line-height: 24pt;
+			background: none;
+			color: #000 !important;
+		}
+
+		/* Layout reset */
+		.landing,
+		.header,
+		.landing-content{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		border: none;
+		color: #000;
+		}
+
+		h1,h2,h3,h4,h5,h6,p{
+			color: #000;
+			font-size: 24pt;
+			line-height: 30pt;
+			margin: 0;
+			padding: 0;
+		}
+	}
 </style>
 </head>
 
 <body>
-	<h1>Print Specific Styles</h1>
+	<h1>Print Specific Styles - Removing styling when someone wants to print this page.</h1>
 	<hr>
 	<div class="advertisement">
 		<p>Stuck at home & going stir crazy during the great Covid Quarantine of 2020? Why not learn to code stuff? <strong>We're offering a full-year access to all of our courses for just $99.</strong></p>
@@ -75,17 +161,19 @@
 			<div class="navigation">
 				<img id="logo" src="https://www.filepicker.io/api/file/vqvUbz4GRm2jXuwJNxb5" alt="logo">
 				<a href="#">Login</a>
-				<a href="#">First Month Free</a>
+				<a href="#" style="border:1px solid #ffde01; border-radius: 25px;">First Month Free</a>
 			</div>
 		</div>
 
 		<div class="landing">
-			<h1>Coding Courses that
-				<em>You actually need.</em>
-			</h1>
-			<h2>Learn to design and build beautiful websites, collaborate with a supportive community & get VIP support and training at Code College.</h2>
-			<a href="#" id="landing-button">Get your first month free</a>
-			<a href="#" id="login-button">Member? login here</a>
+			<div class="landing-content">
+				<h1>Coding Courses that <br>
+					<em style="color: #ffde01; font-size: 3.6rem;">You actually need.</em>
+				</h1>
+				<h2>Learn to design and build beautiful websites, collaborate with a supportive community & get VIP support and training at Code College.</h2>
+				<a href="#" id="landing-button">Get your first month free</a>
+				<a href="#" id="login-button">Member? login here</a>
+			</div>
 		</div>
 	</div>
 </body>
