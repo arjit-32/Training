@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Print Specific Styles</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+<style type="text/css">
+	/*STYLING DOCUMENT*/
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		font-family: 'Montserrat', sans-serif;
+	}
+	.advertisement{
+		background-color: #eb4d5c;
+		padding: 10px;
+		color: white;
+		font-size: 14px;
+		text-align: center;
+	}
+	.advertisement p{
+		display: inline-block;
+	}
+	.advertisement a{
+		display: inline-block;
+		text-decoration: none;
+		background-color: #ffde01;
+		border: 1px solid #ffde01;
+		color: white;
+		text-transform: uppercase;
+		cursor: pointer;
+		font-weight: bold;
+		font-size: 13px;
+		line-height: 26px;
+		padding: 0px 3px;
+		border-radius: 5px; 
+	}
+
+	.header{
+		background: url('https://www.filepicker.io/api/file/Q9U24hZPSFaL5oZ65Ioj') repeat;
+		background-size: 25%;
+		color: white;
+	}
+	.navigation{
+		width: 80vw;
+		margin: 0 auto;	
+	}
+	.navigation #logo{
+		width: 130px;
+	}
+	.navigation a{
+		float: right;
+		padding: 15px 15px;
+		text-decoration: none;
+		color: white;
+	}
+	
+</style>
+</head>
+
+<body>
+	<h1>Print Specific Styles</h1>
+	<hr>
+	<div class="advertisement">
+		<p>Stuck at home & going stir crazy during the great Covid Quarantine of 2020? Why not learn to code stuff? <strong>We're offering a full-year access to all of our courses for just $99.</strong></p>
+		<a href="#" class="advertisement-button">START NOW!</a>
+	</div>
+	<div class="header">
+		<div class="navigation-wrapper">
+			<div class="navigation">
+				<img id="logo" src="https://www.filepicker.io/api/file/vqvUbz4GRm2jXuwJNxb5" alt="logo">
+				<a href="#">Login</a>
+				<a href="#">First Month Free</a>
+			</div>
+		</div>
+
+		<div class="landing">
+			<h1>Coding Courses that
+				<em>You actually need.</em>
+			</h1>
+			<h2>Learn to design and build beautiful websites, collaborate with a supportive community & get VIP support and training at Code College.</h2>
+			<a href="#" id="landing-button">Get your first month free</a>
+			<a href="#" id="login-button">Member? login here</a>
+		</div>
+	</div>
+</body>
+</html>
+

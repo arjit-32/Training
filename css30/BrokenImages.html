@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Broken Images</title>
+
+<style type="text/css">
+	img{
+		position: relative;
+		display: block;
+		margin: 0 0 40px;
+	}
+	img::after{
+		content: "" attr(alt) " Not Found";
+		/* Text styling */
+		font-size:1rem;
+		font-family: monospace;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 800;
+		
+		/* Positioning*/
+		display: inherit;
+		position: absolute;
+		top: 0;
+		left: 0; /*Iske peeche is default icon & alt text*/
+		width: 100%;
+		max-width: 200px;
+		padding: 10px 20px 10px 20px;
+
+		/* Background */
+		background-color: #f0f0f0;
+		background-image: url(https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/32x32/link_broken.png);
+		background-repeat: no-repeat;
+		border: 1px dashed black;
+	}
+</style>
+</head>
+
+<body>
+	<h1>Broken Images</h1>
+	<hr>
+	<img src="profile-picture.jpg" alt="Profile Picture">
+	<img src="About-picture.jpg" alt="About Picture">
+	
+</body>
+</html>
+
