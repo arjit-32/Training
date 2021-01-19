@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Mario</title>
+
+<style type="text/css">
+	.mario-block{
+		display: inline-block;
+		position: relative;
+		margin: 80px auto;
+		width: 16em;
+		height: 16em;
+	}
+	.mario{
+		display: block;
+		width: 1em;
+		height: 1em;
+		background-color: #fff;
+		box-shadow: 0em 0em #fff,
+					1em  0em #fff,
+					2em  0em #fff,
+					3em  0em #fff,
+					4em  0em #1A1A1A,
+					5em  0em #1A1A1A,
+					6em  0em #1A1A1A,
+					7em  0em #1A1A1A,
+					8em  0em #1A1A1A,
+					9em  0em #1A1A1A,
+					10em 0em  #1A1A1A,
+					11em 0em  #1A1A1A,
+					12em 0em  #fff,
+					13em 0em  #fff,
+					14em 0em  #fff,
+					15em 0em  #fff,
+
+					0em 1em #1A1A1A,
+					1em  1em #1A1A1A,
+					2em  1em #1A1A1A,
+					3em  1em #1A1A1A,
+					4em  1em #B84139,
+					5em  1em #B84139,
+					6em  1em #B84139,
+					7em  1em #B84139,
+					8em  1em #B84139,
+					9em  1em #B84139,
+					10em 1em  #B84139,
+					11em 1em  #B84139,
+					12em 1em  #1A1A1A,
+					13em 1em  #1A1A1A,
+					14em 1em  #1A1A1A,
+					15em 1em  #1A1A1A,
+
+					0em 2em #1A1A1A,
+					1em  2em #B84139,
+					2em  2em #B84139,
+					3em  2em #B84139,
+					4em  2em #B84139,
+					5em  2em #B84139,
+					6em  2em #B84139,
+					7em  2em #B84139,
+					8em  2em #B84139,
+					9em  2em #B84139,
+					10em 2em  #B84139,
+					11em 2em  #B84139,
+					12em 2em  #B84139,
+					13em 2em  #B84139,
+					14em 2em  #B84139,
+					15em 2em  #1A1A1A,
+
+					0em 3em #1A1A1A,
+					1em  3em #B84139,
+					2em  3em #1A1A1A,
+					3em  3em #1A1A1A,
+					4em  3em #1A1A1A,
+					5em  3em #1A1A1A,
+					6em  3em #B84139,
+					7em  3em #B84139,
+					8em  3em #B84139,
+					9em  3em #B84139,
+					10em 3em  #1A1A1A,
+					11em 3em  #1A1A1A,
+					12em 3em  #1A1A1A,
+					13em 3em  #1A1A1A,
+					14em 3em  #B84139,
+					15em 3em  #1A1A1A,
+
+					0em 4em #1A1A1A,
+					1em  4em #1A1A1A,
+					2em  4em #fff,
+					3em  4em #fff,
+					4em  4em #fff,
+					5em  4em #fff,
+					6em  4em #1A1A1A,
+					7em  4em #B84139,
+					8em  4em #B84139,
+					9em  4em #1A1A1A,
+					10em 4em  #fff,
+					11em 4em  #fff,
+					12em 4em  #fff,
+					13em 4em  #fff,
+					14em 4em  #1A1A1A,
+					15em 4em  #1A1A1A,
+
+					0em 5em #1A1A1A,
+					1em  5em #fff,
+					2em  5em #fff,
+					3em  5em #1A1A1A,
+					4em  5em #1A1A1A,
+					5em  5em #fff,
+					6em  5em #fff,
+					7em  5em #1A1A1A,
+					8em  5em #1A1A1A,
+					9em  5em #fff,
+					10em 5em  #fff,
+					11em 5em  #1A1A1A,
+					12em 5em  #1A1A1A,
+					13em 5em  #fff,
+					14em 5em  #fff,
+					15em 5em  #1A1A1A,
+
+					0em 6em #1A1A1A,
+					1em  6em #fff,
+					2em  6em #1A1A1A,
+					3em  6em #1A1A1A,
+					4em  6em #1A1A1A,
+					5em  6em #1A1A1A,
+					6em  6em #fff,
+					7em  6em #1A1A1A,
+					8em  6em #1A1A1A,
+					9em  6em #fff,
+					10em 6em  #1A1A1A,
+					11em 6em  #1A1A1A,
+					12em 6em  #1A1A1A,
+					13em 6em  #1A1A1A,
+					14em 6em  #fff,
+					15em 6em  #1A1A1A,
+
+
+					0em 7em #1A1A1A,
+					1em  7em #fff,
+					2em  7em #1A1A1A,
+					3em  7em #1A1A1A,
+					4em  7em #9E978F,
+					5em  7em #1A1A1A,
+					6em  7em #fff,
+					7em  7em #1A1A1A,
+					8em  7em #1A1A1A,
+					9em  7em #fff,
+					10em 7em  #1A1A1A,
+					11em 7em  #1A1A1A,
+					12em 7em  #9E978F,
+					13em 7em  #1A1A1A,
+					14em 7em  #fff,
+					15em 7em  #1A1A1A,
+
+					0em 8em #1A1A1A,
+					1em  8em #fff,
+					2em  8em #fff,
+					3em  8em #1A1A1A,
+					4em  8em #1A1A1A,
+					5em  8em #fff,
+					6em  8em #fff,
+					7em  8em #1A1A1A,
+					8em  8em #1A1A1A,
+					9em  8em #fff,
+					10em 8em  #fff,
+					11em 8em  #1A1A1A,
+					12em 8em  #1A1A1A,
+					13em 8em  #fff,
+					14em 8em  #fff,
+					15em 8em  #1A1A1A,
+
+					0em 9em #fff,
+					1em  9em #1A1A1A,
+					2em  9em #fff,
+					3em  9em #fff,
+					4em  9em #fff,
+					5em  9em #fff,
+					6em  9em #1A1A1A,
+					7em  9em #FEDA00,
+					8em  9em #FEDA00,
+					9em  9em #1A1A1A,
+					10em 9em  #fff,
+					11em 9em  #fff,
+					12em 9em  #fff,
+					13em 9em  #fff,
+					14em 9em  #1A1A1A,
+					15em 9em  #fff,
+
+
+					0em 10em #1A1A1A,
+					1em  10em #B84139,
+					2em  10em #1A1A1A,
+					3em  10em #1A1A1A,
+					4em  10em #1A1A1A,
+					5em  10em #1A1A1A,
+					6em  10em #F08652,
+					7em  10em #1A1A1A,
+					8em  10em #1A1A1A,
+					9em  10em #F08652,
+					10em 10em  #1A1A1A,
+					11em 10em  #1A1A1A,
+					12em 10em  #1A1A1A,
+					13em 10em  #1A1A1A,
+					14em 10em  #B84139,
+					15em 10em  #1A1A1A;
+
+									
+	}
+</style>
+</head>
+<body>
+	<h1>Mario</h1>
+	<hr>
+	<button class="btn" id="jump-btn">Jump <small>[click &amp; hold]</small> </button>
+	<div class="mario-block">
+		<div class="mario"></div>
+	</div>
+
+#B84139 - brown
+#F08652
+#9E978F - grey
+#FEDA00 - yellow
+#E54201 - feet
+
+</body>
+</html>
+
