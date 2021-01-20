@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Modern Layout</title>
+
+<style type="text/css">
+	*{
+		margin: 0;
+	}
+	article,header,aside,footer{
+		background-color: lightblue;
+		box-sizing: border-box;
+		padding: 10px 3px;
+		margin: 2px;
+		font-size: 14px;
+		font-family: monospace;
+	}
+
+	code{
+		background-color: orange;
+		color: white;
+	}
+/*layout 1*/
+
+	.layout1 article{
+		/*width: 60%;
+		display: inline-block;*/
+		width: 58%;
+		float: left;
+	}
+
+	.layout1 aside{
+		/*width: 38%;
+		display: inline-block;*/
+		width: 38%;
+		float: right;
+	}
+
+	.layout1 footer {
+		clear: both;
+	}
+
+
+/*layout 2 */
+	.layout2 header.logo{
+		width: 20%;
+		float: left;
+		margin: 0;
+	}
+
+	.layout2 header nav{
+		width: 78%;
+		float: right;
+		margin: 0;
+	}
+
+	.layout2 header li{
+		float: left;
+		padding: 0px 5px;
+		list-style-type: none;
+		background-color: #fff;
+		margin: 0px 2px;
+	}
+
+	.layout2 header::after{
+		display: table;
+		content: "";
+		clear: both; 
+	}
+
+	.layout2 article{
+		width: 50%;
+		float: left;
+		margin: 2px 5px;
+	}
+
+	.layout2 aside.sidenav{
+		width: 23%;
+		float: left;
+	}
+
+	.layout2 aside.sidebar{
+		width: 23%;
+		float: right;
+	}
+
+	.layout2 footer{
+		margin-top: 5px;
+		clear: both;
+	}
+
+/*layout 3*/
+	.layout3 header .logo{
+		width: 20%;
+		float: right;
+		margin: 0;
+	}
+
+	.layout3 header nav{
+		width: 78%;
+		float: left;
+		margin: 0;
+	}
+
+	.layout3 header li{
+		float: left;
+		padding: 0px 5px;
+		list-style-type: none;
+		background-color: #fff;
+		margin: 0px 2px;
+	}
+
+	.layout3 header::after{
+		display: table;
+		content: "";
+		clear: both; 
+	}
+
+	.layout3 article{
+		width: 30%;
+		float: left;
+		margin: 2px 5px;
+	}
+
+	.layout3 aside.sidenav{
+		width: 23%;
+		float: left;
+	}
+
+	.layout3 aside.sidebar{
+		width: 23%;
+		float: right;
+	}
+
+	.layout3 footer{
+		clear: both;
+	}
+
+	
+</style>
+</head>
+
+<body>
+	<h1>Modern Layout</h1>
+	<hr>
+	<section class="layout1">
+		<h4>Modern Layout #1</h4>
+
+		<header>
+			<p>This is the <code>header</code></p>
+		</header>
+
+		<article>
+			<p>This is an <code>article</code>. It contains body text, such as my name is Arjit sharma and I am working on CSS30 so as to improve my Css. You get it you can put anything in here.</p>
+		</article>
+
+		<aside>
+			<p>Let's throw in an <code>aside</code> as our content sidebar.</p>
+		</aside>
+
+		<footer>
+			<p>Of course, every site must have a <code>footer</code>!</p>
+		</footer>
+	</section>
+
+	<section class="layout2">
+		<h4>Modern Layout #2</h4>
+
+		<header>
+			<div class="logo">
+				Arjit
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<aside class="sidenav">
+			<p>This is another <code>aside</code>, which we'll use as our left navigation bar</p>
+		</aside>
+
+		<article>
+			<p>This is an <code>article</code>. It contains body text, such as my name is Arjit sharma and I am working on CSS30 so as to improve my Css. You get it you can put anything in here.</p>
+		</article>
+
+		<aside class="sidebar">
+			<p>Let's throw in an <code>aside</code> as our content sidebar.</p>
+		</aside>
+
+		<footer>
+			<p>Of course, every site must have a <code>footer</code>!</p>
+		</footer>
+	</section>
+
+<section class="layout3">
+		<h4>Modern Layout #3</h4>
+
+		<header>
+			<div class="logo">
+				Arjit
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<aside class="sidenav">
+			<p>This is another <code>aside</code>, which we'll use as our left navigation bar</p>
+		</aside>
+
+		<article>
+			<p>This is an <code>article</code>. It contains body text, such as my name is Arjit sharma and I am working on CSS30 so as to improve my Css. You get it you can put anything in here.</p>
+		</article>
+
+		<aside class="sidebar">
+			<p>Let's throw in an <code>aside</code> as our content sidebar.</p>
+		</aside>
+
+		<footer>
+			<p>Of course, every site must have a <code>footer</code>!</p>
+		</footer>
+	</section>
+
+
+</body>
+</html>
+
