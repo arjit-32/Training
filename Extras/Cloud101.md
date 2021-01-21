@@ -4,3 +4,4 @@ Cloud is commercial availability of individal comupting services.
 - "On demand service" model
 - Delivered remotely via internet
 
+

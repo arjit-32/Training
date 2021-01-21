@@ -93,11 +93,14 @@ Ex - Arial, Helvetica, sans-serif, courier, monospace*
 # Css Positioning
 
 position property ->
-Static
-Relative - Can add properties like top,left
-Absolute - Target within relative
-Fixed - Same position always
-Inherit
+*Static*
+*Relative* - Just like static, but can add properties like top,left
+*Absolute* - Target within relative(or anything other than static), left & right property specify horizontal & vertical offset from containing block.
+*Fixed* - Same position always
+*Inherit*
+*Sticky*
+
+
 
 ## Clearing Floats
 We use `clear:both` property to tell the document to restart normal flow of document, where the floated element ends.
@@ -146,3 +149,4 @@ Flexible box model, clean way to arrange items within a container.
 	flex: *flex_grow* *flex shrink* *flex basis*
 	<!--Ex -> flex: 2 0 0 // Now this item will grow twice compared to other items-->
 }
+
