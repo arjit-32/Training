@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modal Window</title>
+<style>
+	.overlay{
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 99;
+		background-color: #000;
+		pointer-events: none;/*Dont register this div for mouse events*/
+		opacity: 0;
+		-webkit-transform: scale(0.5);
+				transform: scale(0.5);
+	}
+
+	input[type="checkbox"]:checked ~ .overlay{
+		pointer-events: auto;
+		opacity: 0.9;
+		-webkit-transform: scale(1);
+				transform: scale(1);
+		-webkit-transition: transform 0.5s ease,opacity 0.5s ease;
+		transition: transform 0.5s ease,opacity 0.5s ease;	 
+	}
+
+	.modal{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		z-index: 100;
+		-webkit-transform: translate(-50%,-50%) scale(0.5);
+		transform: translate(-50%,-50%) scale(0.5);
+		width: 100%;
+		max-width: 640px;
+		pointer-events: none;
+		opacity: 0;
+	}
+
+	input[type="checkbox"]:checked ~ .modal{
+		pointer-events: auto;
+		opacity: 1;
+		-webkit-transform: translate(-50%,-50%) scale(1);
+		transform: translate(-50%,-50%) scale(1);
+		transition: transform 0.5s ease, opacity 0.5s ease;
+		-webkit-transition: transform 0.5s ease, opacity 0.5s ease;
+
+		transition-delay: 0.1s;
+	}
+
+	.modal-content{
+		display: block;
+		padding: 30px;
+		background: white;
+	}
+
+</style>
+</head>
+<body>
+	<h1>Modal Window</h1>
+	<hr>
+	<section>
+
+		<input type="checkbox" id="click" style="display: none;" />
+		
+		<label for="click" class="button">
+			<a class="button-theme">Click to Launch</a>
+		</label>
+	
+		<div class="modal">
+			<div class="modal-content">
+				<h3>Advertisement</h3>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quibusdam nemo, eum debitis voluptate incidunt minima eos delectus, non aliquam nihil deleniti beatae laudantium officia, ipsam quia dolore id nobis.lo
+				</p>
+
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Dicta, laboriosam.</p>
+
+				<label for="click" class="button">
+					<a class="button-theme">Close</a>
+				</label>
+			</div>
+		</div>
+		<div class="overlay">
+			
+		</div>
+
+	</section>
+</body>
+</html>
