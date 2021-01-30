@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Spinner</title>
+	<style>
+		.spinner-1{
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			width: 64px;
+			height: 64px;
+			border-radius: 64px;
+		}
+
+		.spinner-1::before{
+			position: absolute;
+			content: "";
+			width: 64px;
+			height: 64px;
+			border-radius: 64px;
+			color: red;
+			box-shadow: inset -2px 0 0 2px currentcolor;
+			clip: rect(0,64px ,32px, 0);
+			animation: rotate 1s infinite linear;
+		}
+
+		.spinner-2{
+			position: relative;
+			margin: 32px;
+			display: inline-block;
+			vertical-align: middle;
+			width: 16px;
+			height: 16px;
+			border-radius: 16px;
+			background-color: green;
+		}
+
+		.spinner-2::before,
+		.spinner-2::after{
+			position: absolute;
+			display: inline-block;
+			vertical-align: middle;
+			height: 16px;
+			width: 16px;
+			border-radius: 16px;
+			background-color: inherit;
+			content: "";
+		}
+
+		.spinner-2::before{
+			transform: translateX(-120%);
+			transform-origin: 32px 50%; /*Most important*/
+			animation: orbit 1s infinite linear;
+		}
+
+		.spinner-2::after{
+			transform: translateX(120%);
+			transform-origin: -16px 50%; /*Most important*/
+			animation: orbit2 1s infinite linear;
+		}
+
+
+		@keyframes rotate{
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+
+
+		@keyframes orbit{
+			0%{
+				transform: translateX(-120%) rotate(180deg);
+			}
+			30%{
+				transform: translateX(-120%) rotate(0deg);
+			}50%{
+				transform: translateX(-120%) rotate(0deg);
+			}100%{
+				transform: translateX(-120%) rotate(-180deg);
+			}
+		}
+
+		@keyframes orbit2{
+			0%{
+				transform: translateX(120%) rotate(180deg);
+			}
+			30%{
+				transform: translateX(120%) rotate(0deg);
+			}50%{
+				transform: translateX(120%) rotate(0deg);
+			}100%{
+				transform: translateX(120%) rotate(-180deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Spinners</h1>
+	<hr>
+
+	<div class="spinner-1"></div>
+
+	<div class="spinner-2"></div>
+</body>
+</html>

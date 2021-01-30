@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tooltip</title>
+<style>
+
+	.tooltip{
+		position: relative;
+		text-decoration: underline;
+	}
+	.tooltip .tooltip-text{
+		visibility: hidden;
+		background-color: black;
+		color: #fff;
+		border-radius: 7px;
+		padding: 5px 2px;
+		position: absolute;
+		
+		/* Bottom		
+		top: 100%;
+		left: 10px;
+		*/
+		
+		/* Top*/
+		bottom: 100%;
+		left: 10px;
+		
+	}
+	.tooltip:hover .tooltip-text{
+		visibility: visible;
+	}
+	.tooltip-text::after{
+		content: " ";
+		position: absolute;
+		top: 0%;
+		left: 10%;
+		border: 5px solid;
+		/* Bottom
+		margin-top: -10px;
+		border-color:  transparent transparent black
+		 transparent;
+		 */
+		 /* Top */
+		 margin-top: 28px;
+		 border-color: black transparent transparent transparent;
+	}
+</style>
+</head>
+<body>
+	<h1>Usefull Tooltip</h1>
+	<hr>
+	<div class="tooltip">
+		<p>Needs Context</p>
+		<span class="tooltip-text">This is tooltip. It will explain everything</span>
+	</div>
+</body>
+</html>
