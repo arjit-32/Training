@@ -36,7 +36,6 @@ Lists
 Others
 	<br>,<hr>,<pre>,<!-- Comment -->
 
-
 # Media
 Images
 	<img src="www.arjitsharma.com/img.jpg" alt="Alternate text">
@@ -95,7 +94,6 @@ Iframe - Displays a webpage within a webpage
 
 </form>
 
-
 # Semantic HTML
 <header>Head of doc</header>
 <nav>Navigation bar/Has Links</nav>
@@ -104,7 +102,6 @@ Iframe - Displays a webpage within a webpage
 <aside>Content aside from content</aside>
 <footer>Footer of doc</footer>
 <details></details> & <summary></summary>
-
 
 # Symbols & Emojis
 &copy; Copyright
