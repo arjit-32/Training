@@ -77,6 +77,38 @@ JS is a dynamically typed language.
 	//toFixed specifies decimal places
 	console.log(a.toFixed(2));//100.30
 
+## Language Constructs
+	
+	for(let i=0;i<10;++i){
+		console.log(i);
+	}
+
+	let i=0;
+	while(i<10){
+		console.log(i);
+		++i;
+	}
+
+	const x=10;
+	if(x == 10){
+		console.log('x is 10');
+	}else if(x>10){
+		console.log('x is greater than 10');
+	}else{
+		console.log('x is less than 10');
+	}
+
+	&&(and), ||(or), !(not)
+	Ternary operator -> let ans = x>10?'yes':'no';
+
+	switch(x){
+		case 1: //Statement;
+		break;
+		case 2: //Statement;
+		break;
+	}
+
+
 ## Functions
 `function` Keyword is used to create a function.
 
@@ -95,7 +127,6 @@ Callback Funtion: We can pass function as argument and can call back later if ne
 	//Callback Functions
 	function yes(){ alert("Yes"); }
 	function no(){ alert("No"); }
-
 	function ask(question,yes,no){
 	    //func yes() and no() will be passed in parameter
 	    if(confirm(ques))
@@ -103,16 +134,28 @@ Callback Funtion: We can pass function as argument and can call back later if ne
 	    else
 	        no();
 	}
-
 	ask("Do you agree Sire?",yes,no);
+
+	// Arrow function
+	const res = (a=1,b=1)=> a+b; //no need to write return also
+	console.log((res(10,10));
+
 
 ## Strings
 	let a = "10";//double quotes 
 	let b = '10';//single quotes
 	let name = new String("Arjit Sharma");//Strings can be objects 
 
+	//Concatenation
+	let c= 'Arjit' + 'Sharma';
+	let c= `My name is ${name} and I am ${age}`;//template string concatenation
+
 	//Finding Length
 	let len = name.length;
+
+	//Comparing Strings
+	let a="Arjit"
+	console.log(a.localeCompare("Arjit"));//returns 0 if both are equal
 
 	//Finding position of substring in a String 
 	let pos1 = name.indexOf("Sharma");//1st occurence
@@ -131,13 +174,14 @@ Callback Funtion: We can pass function as argument and can call back later if ne
 
 	//Accessing characthers in a string
 	str.charAt(0);
-	str.cahrCodeAt(0);//returns unicode charachter at specified position
+	str.charCodeAt(0);//returns unicode charachter at specified position
 	str[0];
 
 	//Converting String to Arrays
 	str.split(" ");//Splits string on basis of whitespace
 	let text = "HELLO";
 	text.split("");// Splits in Charachters
+
 
 ## Arrays
 	let names = [
@@ -154,10 +198,29 @@ Callback Funtion: We can pass function as argument and can call back later if ne
 	//Sorting Array
 	let y = names.sort();
 
-	//Looping Array using forEach method
+	//Loop through arrays
+	for(let i=0;i<names.length;++i){
+		console.log(names[i]);
+	}
+
+	for(let name of names){
+		console.log(name);
+	}
+
+	//forEach method
 	names.forEach(function (val,index){
-	    console.log(index,val);
+	    console.log(val);
 	});
+
+	//map-> creates a new array
+	const LengthOfNames= names.map(function(name){
+			return name.length;
+		}); 
+
+	//filter->filter & create a new array based on a condn
+	const NamesStartingWith_A= names.filter(function(name){
+		return (name.charAt(0).localeCompare("A")==0) 
+		});
 
 	//Adding and Removing Element
 	names.push("Monty");//Adds to last position
@@ -169,6 +232,37 @@ Callback Funtion: We can pass function as argument and can call back later if ne
 	//Arrays to Strings
 	names.toString();//Arjit,Anany,Samay,Monty
 	names.join(" # ");//Arjit#Ananay#Samay#Monty
+
+
+## Object Literal
+		const person={
+			firstName: 'Arjit',
+			lastName: 'Sharma',
+			age: 30,
+			skills: ['C','Java','Python'],
+			address: {
+				street: "Shanti Vihar",
+				city: "Dehradun",
+				state: "UK"
+			}
+		}
+
+		// Adding properties 
+		person.email = 'arjitsharma@gmail.com';
+
+		//getting values corresponding to keys
+		console.log(person.firsName);
+		console.log(person.skills[1]); // Java
+
+		//looping through object
+		for (const property in person) {
+			console.log(`${property}: ${person[property]}`);
+		}
+
+		//Destructuring -> pulling keys out of object & making them variables
+		const {firstName, lastName, address: {city}} = person;
+		console.log(firstName); // Arjit
+		console.log(city); // Dehradun
 ---
 
 # DOM Manipulation
