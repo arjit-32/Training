@@ -1,4 +1,4 @@
-# Chapter-1(Intro)
+# Introduction
 
 ## Basic Terms
 
@@ -63,6 +63,6 @@ If f(n) = O(nlogb a-ϵ), then T(n) = Θ(nlogb a).
 If f(n) = Θ(nlogb a), then T(n) = Θ(nlogb a * log n).
 If f(n) = Ω(nlogb a+ϵ), then T(n) = Θ(f(n)).
 
-# Chapter-2(Recursion & Backtracking)
+# LinkedList
 
-Any function which calls itself is called Recursive.
+Linked List is a linear data structure.
