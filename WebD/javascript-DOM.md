@@ -231,6 +231,17 @@ Adding Element to DOM -
 	    console.log("button clicked");
 	}
 
+## Other Events
+	//Document events
+	DOMContentLoaded
+	
+	//CSS events
+	transitioned
+	
+	//Form events
+	submit
+	focus
+
 ## Mouse Events
 	/*dblclick
 	mousedown
@@ -240,6 +251,7 @@ Adding Element to DOM -
 	mouseover
 	mouseout 
 	mousemove
+	contextmenu-> when mouse right-clicks on element
 	*/
 	btn = document.querySelector('.btn');
 

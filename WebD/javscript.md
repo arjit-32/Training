@@ -53,6 +53,7 @@ JS is a dynamically typed language.
 		Symbols : const sym = Symbol();   
 
 - Reference DTs: 
+*Everything apart from primitives is an object*
 
 		Arrays : const names = ['Arjit','Adam']
 		Object Literals : const person = { name:"Arjit", age:19}
@@ -121,6 +122,23 @@ Callback Funtion: We can pass function as argument and can call back later if ne
 	let yo = function(){
 	    //Code
 	};
+
+	//Anonymous & self invoking function
+	let abc = (function(){
+			let x="Hello!";
+			console.log(x);
+		})();
+
+	//Closure -> when we have acces to variable even when its scope ended
+	// x has access to y(which is in a anonymous function)
+	let x = (function(){
+			let y=9;
+			return function(){
+					y+=1;
+					console.log(y);
+				}
+		}
+	)();
 
 	//Callback Functions
 	function yes(){ alert("Yes"); }
@@ -475,3 +493,4 @@ Object.create() methord is used to create a new object with the specified protot
 	});
 
 	console.log(arjit.greeting);
+
