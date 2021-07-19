@@ -1,23 +1,27 @@
+```python
 print("Hello, World!")
 print("Number is ", n)
 print(i,end = ' ')//end tells what to end with after printing,(in this case a space)
 a="Hello",b=60;
 print("%s  %d ,How are ya?" % (a,b) );  
+```
 
 
 
 
-
-Taking Input
+## Taking Input
+```python
 n = int(input())
 x, y = map(int,input().split())
 lis = list(map(int,input().split()))
+```
 
 
 
+## Data Types
+```python
 
-Data Types
-//Standard DT
+#Standard DT
 Numbers 
 			x=69
 
@@ -33,24 +37,26 @@ Tuple
 
 Dictionary
 			d = {1:'arjit', 2:'Anik', 3:'Jam', 4:'Milli'};   
+```
 
 
 
 
 
-
-Operators
+## Operators
+```python
 +,-,*,/,//(Floor Division),%(remainder),**(exponential)
 ==,!=,<=,>=,<,>
 &,|,^,~,<<,>>
 Logical - and,or,not
 Membership op- in,not in
 Identify op - is,is not
+```
 
 
 
-
-Control Structure
+## Control Structure
+```python
 if n % 2 == 1:
 	print("Weird")
 elif n % 2 == 0 and 2 <= n <= 5:
@@ -60,12 +66,12 @@ elif n % 2 == 0 and 6 <= n <= 20:
 else:
 	print("Not Weird")
 
-//Shorthand
+#Shorthand
 print("a") if a>b else print("b")
+```
 
-
-Looping
-
+## Looping
+```python
 for i in range(0,5):  
 	print(i,end = ' ')//Ouput: 0 1 2 3 4 5  
 
@@ -83,24 +89,24 @@ while conditon:
 
 
 
-Usefull features for looping
+#Usefull features for looping
 
 break;
 continue;
 pass;//Null operation,does nothing just used when empty block is there
+```
 
 
 
-
-Functions
-
+## Functions
+```python
 def is_leap(year):
 	return year % 4 == 0 and (year % 400 == 0 or year % 100 != 0)
+```
 
 
-
-Strings 
-
+## Strings 
+```python
 //Multiline string
 a = ''' Hello
 		Multiline
@@ -154,14 +160,14 @@ str = str[:2] + "p" + string[3:] // arpit
 a.lower(), a.upper(), capitalize(), title(), swapcase() ,a.strip() 
 a.replace("H","J"), count(), find()
 isalpha(),isdigit(),isalnum(),isnumeric()
+```
 
 
 
 
 
-
-Lists
-
+## Lists
+```python
 a = ["1",2,3,4]
 
 //Accesing elements in list
@@ -220,11 +226,13 @@ Output :
 
 
 print([[i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if((i+j+k)!=n)])
+```
 
 
 
+## Sets
+```python
 
-Sets
 //unordered and unsequenced collection
 s = {"A","B","C"}
 
@@ -246,12 +254,12 @@ for i in range(len(arr)+1):
 for j in range(i+1,len(arr)+1):
 s=arr[i:j]
 subsets.append(s)
+```
 
 
 
-
-Dictionaries
-
+## Dictionaries
+```python
 d={
 "brand":"Ford",
 "model":"Mustang",
@@ -271,6 +279,7 @@ for k,v in d.items():
 //Removing item with specified key:
 del d["year"]
 d.pop("year")
+```
 
 
 
@@ -278,9 +287,8 @@ d.pop("year")
 
 
 
-
-Multiple Arguments
-
+## Multiple Arguments
+```python
 def fun(*args):
 total = 0
 for i in args:
@@ -300,3 +308,4 @@ Note, operator '**', when used on a dictionary, returns its keys.
 
 Ques Given n ..print 1234...n
 print(*range(1, int(input())+1), sep='')
+```
