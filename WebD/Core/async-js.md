@@ -122,7 +122,7 @@ giveTest(getMarks);
 ```
 
 ## Promises
-Object that may produce value in the future
+Object that handles asynchronous result of an operation.
 ```javascript
 //To get response from promise we use .then()
 function giveTest(){
