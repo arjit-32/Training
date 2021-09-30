@@ -12,4 +12,4 @@ __Others__
 ---
 
 # Learning Tracker
-1. Computer Architecture by Princeton Uni(Coursera) &nbsp; [Link](https://www.coursera.org/learn/comparch/)
+1. Computer Architecture by Princeton(Coursera) &nbsp; [Link](https://www.coursera.org/learn/comparch/)
