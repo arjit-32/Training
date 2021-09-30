@@ -146,6 +146,10 @@ int[] arr = new int[100];
 int[][] matrix = new int[10][10];
 int[] arr = {1,2,3,4};
 ```
+**for each loop**
+```java
+for(int i: arr){ Sopln(i); }
+```
 
 **Loop through 2D array**
 
@@ -160,47 +164,50 @@ for(int i=0; i< arr.length;++i){
 **Methods**
 
 ```java
-System.arraycopy(src,srcPosition,dest,destPosition,length); // Copies array
 Arrays.toString(arr); // Converts array to String
-List l = Arrays.asList(arr); // Converts array to list
+List l = Arrays.asList(arr); // Converts array to arraylist
+arrList.toArray(arr); // Convert arraylist to array
 Arrays.binarySearch(arr, Key);
-Arrays.binarySearch(arr, 1, 3, Key));
-Arrays.equals(arr1, arr2);
+Arrays.binarySearch(arr, from, to, Key));
+Arrays.equals(arr1, arr2); // Arrays.deepequals(arr1, arr2);
+int[] copy = Arrays.copyOf(arr,arr.length);
+int[] copy = Arrays.copyOfRange(arr,from,to);
+System.arraycopy(src,srcPosition,dest,destPosition,length); // Copies array
+Arrays.fill(arr,key); 
+Arrays.fill(arr,from,to,key);
 Arrays.sort(arr);
+Arrays.parallelSort(arr); //faster
+Arrays.sort(arr,from,to);
+Arrays.sort(arr,Comparator<super T>);
+Arrays.mismatch(a1,a2); // 1'st unmatched element index
 ```
 
 ### Strings
 
 char[] c = {'a','e','i','o','u'};
-
 String s = "aeiou";
-
 String s = new String("welcome");
 
 **Methods**
 
 s1.equals(s2);
-
 s1.equalsIgnoreCase(s2);
-
 s1.compareTo(s2); // 0 means equal,+ve means s1> s2, -ve means s2>s1
-
 s3 = s1+s2; // Concatenation
-
 s.substring(0,2); // hello → he
-
 str.length(); 
-
 str.charAt(0);
 
 ## Tricks
 
-- Returning 2 values from a function
+- Returning 2 values from a function : Use class with 2 class variable & return its object
+
+<hr>
+---
 
 ## Java Collections Tutorial
 
 Collection is a framework(set of classes and interfaces) that provides architecture to store and manipulate the group of objects.
-
 Iterable → Collections → List,Queue,Set
 
 Iterator Interface
@@ -243,12 +250,8 @@ ArrayList<String> list = new ArrayList<String>();
 //Adding element 
 list.add("Arjit");
 list.add(1,"Midoriya");
-list.add("Narruto");
 
 //Adding another collection to Arraylist
-ArrayList<String> temp = new ArrayList<String>();
-temp.add("Yolo");
-temp.add("Holo");
 list.addAll(temp);
 
 //Removing elements
