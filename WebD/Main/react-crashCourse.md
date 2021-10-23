@@ -34,7 +34,6 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
 ```
 
@@ -85,8 +84,80 @@ Header.propTypes = {
 ```
 2. Inline but cleaner
 ```JSX
-<h1 style={headerStyle}>Anything</h1>
+<h1 style={headerStyle}>Anything</h1> {/*In Jsx*/}
 
 
 const headerStyle = {color: '#fff', backgroundColor: '#aaa'}
 ```
+3. External stylesheet
+```JSX
+import "./styles.css"; {/*In app.js*/}
+```
+
+## Events 
+Can have _onClick_ JSX attribute
+```JSX
+const Button = () => {
+  const clicked = () => {
+    console.log('Hello');
+  }
+  return (
+    <button onClick={clicked}>Add</button>
+  );
+};
+```
+To make dynamic button, send event via props & handle it in parent.
+_Header.js_
+```JSX
+import Button from "./Button";
+
+const Header = (props) => {
+  const onClick = () => {
+    console.log("Click");
+  };
+  return (
+    <header className="Header">
+      <h1>{props.title}</h1>
+      <Button text="Add" onClick={onClick} />
+    </header>
+  );
+};
+export default Header;
+```
+
+_Button.js_
+```JSX
+const Button = (props) => {
+  return (
+    <button className="btn" onClick={props.onClick}>
+      {props.text}
+    </button>
+  );
+};
+
+export default Button;
+```
+
+## State & useState Hook
+
+State is immutable, we cant directly change
+Hook is a special function that lets us hook into React features. For ex - If we want our function component to have state we have useState hook.
+
+```JSX
+import React, { useState } from 'react';
+
+const Example = () => {
+  const [count, setCount] = useState(0); {/*count set to 0*/}
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+_Done till 50:41_
