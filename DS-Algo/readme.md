@@ -30,3 +30,4 @@ TOPIC | Ques | Soln | Diff | Freq | Comments
 9. Tree &nbsp; [Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)  &nbsp; [Solution](https://leetcode.com/submissions/detail/576800610/) &nbsp; |E| &nbsp; |0.5X| &nbsp; If root equals left and right child
 10. Tree &nbsp; [Leaf Similar Tree](https://leetcode.com/problems/leaf-similar-trees/)  &nbsp; [Solution](https://leetcode.com/submissions/detail/577508668/) &nbsp; |E| &nbsp; |0.5X| &nbsp; DFS, store in 2 lists  
 11. Tree &nbsp; [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)  &nbsp; [Solution](https://leetcode.com/submissions/detail/580436374/) &nbsp; |E| &nbsp; |1X| &nbsp; 
+12. Array &nbsp; [Build array from Permutations](https://leetcode.com/problems/build-array-from-permutation/)  &nbsp; [Solution](https://leetcode.com/submissions/detail/581051835/) &nbsp; |E| &nbsp; |1X| &nbsp; 

@@ -1,4 +1,4 @@
-## Overview
+## Spring Overview
 - Simplify Java Enterprise Development
 - Lightweight dev with java POJOs(better than EJBs that were used in J2EE)
 - Dependency Injection 
@@ -73,6 +73,7 @@ Whenever a dependency of a bean we are trying to get uses Prototype scope while 
 ## Lifecycle of Bean
 - *@PostConstruct* - This method runs just after bean is created.
 - *@PreDestroy* - Runs just before bean is destroyed
+---
 
 ## Junit
 - Junit framework can be used for automation testing in CI/CD pipeline.
@@ -86,7 +87,87 @@ Whenever a dependency of a bean we are trying to get uses Prototype scope while 
 		assertEquals(2,s.add(1,1));
 	}
 ```
+---
+
 ## Mockito
+- How to test a piece of code without implementing and testing its dependencies.
+- Without mockito we will have to create a stub, but problem is for different cases we have to create different stubs hence Mockito is used.
+Example - 
+We have Data which is dependent on DataService, so we mock DataService.
+```java
+@Test
+void Test(){
+	DataService dataservicemock = mock(DataService.class);
+	when(dataservicemock.retrieveAllData()).thenReturn(new int[] {-20,-40,-2,-19}); //when this function is called return this array
+	Data ob = new Data(dataservicemock); // injecting using constructor injection
+	int res = ob.findGreatest();
+	assertEquals(-2,res);
+}
+```
+- Can also use *@RunWith(MockitoJUnitRunner.class),@Mock,@InjectMocks*.
+Example - 
+```java
+@RunWith(MockitoJUnitRunner.class)
+class test_Data {
+	@Mock
+	DataService dataservicemock;
+
+	@InjectMocks
+	Data ob;
+
+	@Test
+	void test1() {
+		when(dataservicemock.retrieveAllData()).thenReturn(new int[] {20,40,2,19});
+		int res = ob.findGreatest();
+		assertEquals(40,res);
+	}
+}
+```
+
+## SpringBoot
+- Enable building production ready appln quickly.
+- Provide common non-functional features(embedded servers,metrics,health checks,externalized config)
+- Has starter projects(web,jpa etc)
+- Has embedded servers(tomcat,jetty etc).i.e, can bundle server with appln
+- It has Autoconfiguration - looks at Frameworks in classpath & existing configuration and then configures it for us.
+
+## simple REST service
+Create a class Book then create BooksController
+```java
+@RestController
+public class BooksController {
+	@GetMapping("/books")
+	public List<Book> getAllBooks(){
+		return Arrays.asList(new Book(1l,"Kite Runner","Arjit Sharma"));
+	}
+}
+```
+
+## Spring AOP
+- AOP is approach for implementing cross cutting concerns(some concerns which are in more than 1 layer, like security)
+- In given below code, this method will run before execution any class in aopExample.business, this way it can be used to pre-process before running a service. Ex- checking user authentication before service classes.
+```java
+@Aspect
+@Configuration
+public class aspect {	
+	@Before("execution(* aop_Example.business.*(..))")
+	public void checkIfDataIsClean(){
+		logger.info("Checking if data is clean");
+	}
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Useful Annotations
