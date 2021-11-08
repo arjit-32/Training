@@ -362,7 +362,7 @@ Callback Funtion: We can pass function as argument and can call back later if ne
 	}
 
 ## Object.Create()
-	Object.create() methord is used to create a new object with the specified prototype object and properties
+	Object.create() method is used to create a new object with the specified prototype object and properties
 
 	const personPrototype = {
 	    greeting: function(){
@@ -444,7 +444,7 @@ Callback Funtion: We can pass function as argument and can call back later if ne
 	const sayHello = () => console.log('Hello');
 
 	//To return a string no need to use return keyword.One Line Returns
-	const sayHello =() => 'Hello';
+	const sayHello = () => 'Hello';
 	console.log(sayHello());
 
 	//To return object literal wrap object in parenthesis,so that it doesnt consider it as function body
