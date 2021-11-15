@@ -61,6 +61,9 @@ public class bubbleSort{
 Note - Autowiring resolution can be done by adding @Primary or @Qualifier or using ByName
 ---
 
+
+
+
 ## Scope of Bean
 1. singleton: One instance per Spring Context *(By default)*
 2. prototype: New bean whenver requested *(Use @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE))*
