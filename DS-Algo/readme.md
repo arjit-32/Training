@@ -1,23 +1,12 @@
 # Syllabus
 
-__Data Structures__
-- Arrays,Matrix & Strings
-- Stacks,Queues & LinkLists
-- Trees,Heaps & Graphs
-- Hashing
-- Tries, Disjoint Sets & Segment Trees
-
-__Algorithms__
-- Greedy
-- Bit Manipulation
-- Search & Sort
-- Divide & Conquer
-- Recursion & Backtracking
-- Dynamic Programming
+DSA 
+CP Topics - https://docs.google.com/document/d/1iXRs_bcjimqm-mFiIXWIolljSAS_1Xg8OZ2TzMBLhcg/edit
+CP Practice - https://a2oj.herokuapp.com/?handle=arjitsharma32&rating=0&div=1
 
 ---
 
-# Ques Tracker
+# LC Ques Tracker
 TOPIC | Ques | Soln | Diff | Freq | Comments
 1. Tree &nbsp; [Range Sum Of BSTs](https://leetcode.com/problems/range-sum-of-bst/)  &nbsp; [Solution](https://leetcode.com/submissions/detail/574447664/) &nbsp; |E| &nbsp; |0X| &nbsp; Look how to retain sum in recursion
 2. Tree &nbsp; [Search in a BST](https://leetcode.com/problems/search-in-a-binary-search-tree/)  &nbsp; [Solution](https://leetcode.com/submissions/detail/574778978/) &nbsp; |E| &nbsp; |1X|  

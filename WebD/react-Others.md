@@ -1,4 +1,4 @@
-# Intro
+# React Crash Course(TraversyMedia)
 
 ### Why React ? 
 Runs on client as SPA(Single Page Application)
@@ -159,5 +159,86 @@ const Example = () => {
   );
 }
 ```
+_Done till 50:41 from Travery crash course_
+---
 
-_Done till 50:41_
+# React Documentation
+
+## Hello World
+```javascript
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+```
+
+## Introducing JSX
+
+JSX - syntax extension to javascript, it produces React elements.
+
+Instead of seperating technologies by putting markup & logic in seperate files, React seperates concerns with loosely coupled components.
+
+We embed javascript in JSX using curly brace -> {}
+
+## Elements
+
+Smallest building block.(components are made of elements).
+React elements are objects & React DOM takes care of updating the DOM.
+
+React elements are immutable.
+
+React only update whats necessary.
+
+## Components & Props
+
+Components are like functions, they take in props and return React elements describing what should appear on screen.
+
+- Function Components
+
+```javascript
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+- Class Components
+
+```javascript
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+## State & Lifecycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

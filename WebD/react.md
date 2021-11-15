@@ -309,6 +309,8 @@ export default Form;
 
 # CHAPTER 3 : Lists & Conditions
 
+When working with lists, unique key(a special attribute) is used for React to distinguish individual list items.
+
 ## Passing array to Child component & printing
 
 _App.js_
@@ -339,7 +341,7 @@ export default function App() {
   const [tasks, changeTask] = useState(["do react", "bring eggs", "walk"]);
 
   const addTask = (t) => {
-    changeTask((prevState) => {
+    changeTask(prevState => {
       return [...prevState, t];
     });
   };
@@ -377,3 +379,32 @@ const Input = (props) => {
 };
 export default Input;
 ```
+
+
+## Conditional Content
+- Using Ternary operator((condn)?true:false)
+
+```javascript
+const ListItem = (props) => {
+  return (
+    <ul>
+      {props.tasks.length === 0 ? (
+        <p>No Items, Done for the day </p>
+      ) : (
+        props.tasks.map((t) => <li>{t}</li>)
+      )}
+    </ul>
+  );
+};
+export default ListItem;
+```
+
+- Using && op
+If 1st condn is true, it returns 2nd operand/statement
+
+```javascript
+{1===1 && <p>1 is indeed, equal to 1</p>}
+```
+
+# CHAPTER 4 : Styling Components
+
