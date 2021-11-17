@@ -6,10 +6,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class binarySearch {
 	@Autowired
-	private sort quickSort; //Autowiring by name
+	//private sort quickSort; // Autowiring by name
+	private sort s; //Autowiring by type
+	
+	binarySearch(sort s){
+		this.s=s;	}
 	
 	public void binarySearchMethod() {
-	quickSort.sortmethod();
+	s.sortmethod();
 	System.out.println("Binary searched");
 	}
 	
