@@ -19,7 +19,6 @@ public class PersonJpaRepository {
 	@PersistenceContext 
 	EntityManager entityManager;
 	
-	
 	//Read all - Done using JPQL(java persistence query language)
 	// JPQL is written on Entity & not on Database
 	public List<Person> findAll() {

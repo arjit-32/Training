@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.arjit.database.databasedemo.entity.Person;
 import com.arjit.database.databasedemo.jdbc.PersonJdbcDao;
 import com.arjit.database.databasedemo.jpa.PersonJpaRepository;
+import com.arjit.database.databasedemo.springData.PersonSpringDataRepository;
 
 @SpringBootApplication
 public class DatabaseDemoApplication implements CommandLineRunner{ //CommandLineRunner is just a utility method that runs after applicationcontext 
@@ -21,8 +22,12 @@ public class DatabaseDemoApplication implements CommandLineRunner{ //CommandLine
 //	PersonJdbcDao personjdbcdao;
 	
 	//Using JPA
+//	@Autowired
+//	PersonJpaRepository repository;
+	
+	//Using SpringData JPA
 	@Autowired
-	PersonJpaRepository repository;
+	PersonSpringDataRepository repository;
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	
@@ -39,11 +44,15 @@ public class DatabaseDemoApplication implements CommandLineRunner{ //CommandLine
 //		logger.info("Update person with id=10001",personjdbcdao.updateName(10001,"Arjit Sharma"));
 		
 		//Using JPA
-		logger.info("Inserting person -> {} ",repository.insertOrUpdate( new Person("Arjit","UK",new java.util.Date())));
-		logger.info("Inserting person -> {} ",repository.insertOrUpdate( new Person("Tomato","US",new java.util.Date())));
+//		logger.info("Inserting person -> {} ",repository.insertOrUpdate( new Person("Arjit","UK",new java.util.Date())));
+//		logger.info("Inserting person -> {} ",repository.insertOrUpdate( new Person("Tomato","US",new java.util.Date())));
+//		logger.info("Reading user by id=1 -> {} ",repository.findById(1));
+//		logger.info("Read all -> {}",repository.findAll());
+		
+		//Using SpringDataJpa
+		logger.info("Inserting person -> {} ",repository.save( new Person("Arjit","UK",new java.util.Date())));
+		logger.info("Inserting person -> {} ",repository.save( new Person("Tomato","US",new java.util.Date())));
 		logger.info("Reading user by id=1 -> {} ",repository.findById(1));
 		logger.info("Read all -> {}",repository.findAll());
-	
 	}
-
 }
