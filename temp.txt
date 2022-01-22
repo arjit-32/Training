@@ -1,0 +1,14 @@
+# Operators
+
+- bitwise 
+```java
+public class MyClass {
+    public static void main(String args[]) {
+    int a=5; //0101
+    int b=10; //1010
+    int res1=a|b; // 1111 which is 15
+    int res2=a&b; //0000 which is 0
+    System.out.println(res1+" "+res2);
+    }
+}
+```

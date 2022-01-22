@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Box Game</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+        <style>
+
+            body{
+                background-color: cadetblue;
+            }
+            #square{
+            background-color: blue;
+            border-radius: 50%;
+            position: absolute;
+            }
+
+            .container{
+                display: flex;
+                justify-content: center;
+            }
+
+            .container h1{
+                font-family: 'Monofett', cursive;
+                background-color:yellow;
+                font-size: 3em;
+                padding: 0 20px 0 20px;
+                border-radius: 10px;
+            }
+
+            #generateButton{
+                background-color: black;
+                color: white;
+                font-size: 22px;
+                font-family:'Courier New', Courier, monospace;
+                box-shadow: 5px 3px rgb(78, 78, 78);
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1>Box Game</h1>      
+        </div>
+        <button id="generateButton">Generate More Boxes</button>  
+        
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+		<title>Canalys office clock</title>
+        
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" />
+        <link rel="stylesheet" href="css/styles.css">
+	
+
+    </head>
+    <body>
+		
+        <div class="full-width" id="messages">
+			<ul class="clock inline-block align-center full-width">
+				<li id="amerClock">
+					<div class="image-wrapper">						
+						<h3 class="region" id="region" >Americas</h3>
+						<h5 class="date"></h5>
+						<h1 class="ticker"></h1>
+					</div>
+				</li><li id="emeaClock">
+					<div class="image-wrapper">						
+						<h3 class="region" id="region" >EMEA</h3>
+						<h5 class="date"></h5>
+						<h1 class="ticker"></h1>
+					</div>
+				</li><li id="indiaClock">
+					<div class="image-wrapper">						
+						<h3 class="region" id="region" >India</h3>
+						<h5 class="date"></h5>
+						<h1 class="ticker"></h1>
+					</div>
+				</li><li id="apacClock">
+					<div class="image-wrapper">						
+						<h3 class="region" id="region" >APAC</h3>
+						<h5 class="date"></h5>
+						<h1 class="ticker"></h1>
+					</div>
+				</li>
+			</ul>
+			<div class="tweet">
+				<p>🎓We're hiring!🎓
+				🌟Seeking a talented and creative software engineer to join our dynamic Digital team in Singapore/India!🌟</p>
+				<span>20 hours 41 mins ago</span>
+			</div>
+			
+			<div class="tweet">
+				<p>According to latest <a href="http://twitter.com/Canalys" target="_blank">@Canalys</a> analysis, shipments of notebooks and mobile workstations grew 28.3% year-on-year. This… <a href="https://t.co/plP7d65xwE" target="_blank">https://t.co/plP7d65xwE</a>
+				</p>
+				<span>15 Nov</span></div>
+				
+			<div class="tweet">
+				<p>
+					According to Ben Stanton, <a href="http://twitter.com/Canalys" target="_blank">@Canalys</a> Senior Analyst, “Limited supply of 4G chipsets will cause supply chain bottleneck… <a href="https://t.co/cRwa6fiJKg" target="_blank">https://t.co/cRwa6fiJKg</a>
+				</p>
+				<span>13 Nov</span>
+			</div>
+			
+		</div>
+		<!-- ALERT Template -->
+		<div id="alert-template" class="alert-template">
+			<div class="alert-box">
+				<div class="alert-header">	
+					<img src="images/notification.gif" alt="this slowpoke moves"  width=150/>
+					<h1>
+						<span class="alert-header-text">New Deal is In !!</span> 
+					</h1>
+				</div>
+				<div class="alert-body">
+					<p id="alert-text" class="alert-text"></p>
+				</div>
+			</div>
+		</div>
+	
+		<!--TWEET Template-->
+		<div id="tweet-template">
+			<div class="">
+				<p></p>
+			</div>
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
