@@ -1,7 +1,15 @@
 <div style="text-align:center">
   <h1>
-    {{title}}!!
+    <a class='navbar-brand'>{{title}}</a>
   </h1>
 </div>
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <ul class="nav nav-pills">
+    <li><a class="nav-link" routerLink='/welcome'>Home</a> </li>
+    <li><a class="nav-link" routerLink='/products'>Product</a> </li>
+  </ul>
+</nav>
 
-<pm-products></pm-products>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

@@ -1,11 +1,13 @@
 <div class="crop"
      [style.width.px]="cropWidth"
-     [title]="rating">
+     [title]="rating"
+     (click)='onClick()'
+     >
   <div style="width: 75px">
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
+    <span class="fa fa-star" id="1"></span>
+    <span class="fa fa-star" id="2"></span>
+    <span class="fa fa-star" id="3"></span>
+    <span class="fa fa-star" id="4"></span>
+    <span class="fa fa-star" id="5"></span>
   </div>
 </div>
