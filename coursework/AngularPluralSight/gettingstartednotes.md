@@ -403,7 +403,7 @@ product: IProduct | undefined; // interface or undefined
 <div> {{ product?.productName }} </div>  // If objects property is null or undefined, simply returns null and doesnt throw error
 
 // Use *ngIf
-<div *ngId='product'> {{ product.productName }} </div>
+<div *ngIf='product'> {{ product.productName }} </div>
 ```
 
 
