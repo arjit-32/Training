@@ -1,0 +1,73 @@
+Domain 1 (26%) : Cloud Concepts
+Domain 2 (25%) : Security and Compliance
+Domain 3 (33%) : Technology
+Domain 4 (16%) : Billing and Pricing
+
+65 Ques - 50 scored + 15 unscored
+Time - 90 mins
+
+
+What is Cloud Computing ?
+Using a network of remote servers hosted on the internet to store, manage, and process data,
+rather than a local server or a personal computer.
+
+Evolution of Cloud Hosting 
+Dedicated Server - Expensive, High Maintenance, High Security
+VPS(1 physical machine is virtualized into sub machnines, runs multiple sites) - Better Utilization and Isolation of Resources
+Shared Hosting(Shared by multiple businesses, relies on tenants under utilizing their resources) - Cheap, limited functionality, Poor isolation
+Cloud Hosting(Multiple M/C that act as 1 system, distributed computing) - Flexible,Scalable,Secure
+
+AWS
+Launched in 2006(S3 in March'06, EC2 in Aug'06)
+
+CSP 
+Provides multiple cloud services, which can be chained together to create cloud architectures, accessible via Single unified API
+
+Landscapes of CSP 
+Tier-1: AWS, Azure, GCP, Alibaba
+Tier-2: IBM, Oracle, Rackspace
+Tier-3: Vultr, Digital Ocean, Linode
+
+Common Cloud Services
+Compute(EC2), Networking(EBS), Storage(RDS), Databases(VPC)
+
+Evolution of Computing -
+Dedicated - Physical server wholly utilized by a single customer.
+	    Guess capacity, underutilized, cant vertically scale,
+VM - Runs multiple virtual machines on 1 machine
+     Hypervisor is software layer that lets you run VMs
+     Pay fraction of server
+     Easy to scale
+
+Containers - VMs running multiple containers
+	     Docker Deamon is S/W layer that lets you run multiple containers
+	     Can maximize the utilize of available resource
+	     Can run multiple apps without conflict in resource sharing
+
+Functions - Are managed VMs running managed containers
+	    Upload piece of code, choose memory and duration
+            Only responsible for code and data
+            Cost effective, only pay for time code is running
+	    Downside - Cold start
+
+Types of Cloud Computing - 
+SAAS(For customers), PAAS(For developers, EBS, Heroku, AppEngine), IAAS(For Admins, Aws, Azure)
+
+Deployment Models - 
+Public Cloud - DropBox
+Private Cloud(On-Premise, Cloud could be OpenStack)
+Hybrid Cloud(On-Premise and CSP) - Banks, FinTech
+Cross Cloud(Multiple CSPs, Amazon EKS, Azure Arc, GCP kubernetes) - Government,Insurance companies
+
+---
+PuTTY
+
+
+---
+
+
+
+
+
+
+

@@ -8,10 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardComponent implements OnInit {
   // Expect data from parent
   @Input() title='';
-  @Input() imageUrl='';
-  @Input() content='';
-  @Input() username='';
-
+  @Input() imageUrls: string[] = [];
+  @Input() imageCaptions: string[] = [];
+  @Input() links: string[] = [];
   constructor() { }
 
   ngOnInit(): void {

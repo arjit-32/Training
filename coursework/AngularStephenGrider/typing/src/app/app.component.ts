@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  randomText = 'lorem impsum arjit is sjar,a nsn sks kansas';
-
+  randomText = 'what the hell';
+  
   onInput(value: string) {
-    console.log(value);
+    
   }
+
 }

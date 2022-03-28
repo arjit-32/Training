@@ -7,11 +7,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 import { ProductModule } from './products/product.module';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,7 @@ import { ProductModule } from './products/product.module';
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent},
       { path: '', redirectTo: 'welcome', pathMatch:'full'},
-      { path: '**', redirectTo: 'welcome', pathMatch:'full'},
+      { path: '**',  component: Error404Component},
     ]),
     ProductModule
   ],
