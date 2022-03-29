@@ -1,3 +1,4 @@
+import { randQuote  } from '@ngneat/falso';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,10 +8,14 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  randomText = 'what the hell';
-  
+  time = new Date().toLocaleString();
+  randomText = randQuote()
+  enteredText = "";
   onInput(value: string) {
-    
+    this.enteredText = value;
   }
 
 }
+
+
+
