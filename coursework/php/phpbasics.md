@@ -1,3 +1,123 @@
+## Language constructs
+
+```php
+echo "<h1>Hello</h1>"
+
+// variables
+$name = "Arjit";
+
+// getType() to get type of variable or var_dump to print type with variable
+echo getType($name) // String
+var_dump($name) // string(5) "Arjit"
+
+//Note - In booleans, true is converted to 1, false is converted to empty string
+$n = true;
+echo $n;
+
+// Check if variable is defined
+isset($name) // true
+
+//Constants, some built in contants of PHP are SORT_ASC,PHP_INT_MAX ..
+define('PI',3.14);
+echo PI;
+
+// Conversion
+$str = '12.34';
+$n = (float)$str; // or using intval($str)
+
+// STRINGS
+$name = 'arjit'; // single quotes
+$sentence = "Hello I am $name."; // double quotes recognize interpolated variables
+$sentence = <<< END
+It's a <b>$heredoc</b>
+can write "Anything" here.
+END; // Newlines, spacing, and quotes are all preserved in a heredoc.
+strpos($_POST['email'], '@') === false
+substr("arjit",0,3);
+substr_replace('My pet is a blue dog.','fish.',12);
+strrev('what');
+strtolower(),strtoupper(),trim()
+'My name is '.$user['name']; // .(dot) is used to concatenate
+
+// Arrays
+$arr = ['A','B','C'];
+echo $arr[0]; // A
+$arr[] = 'D'; // Append a element
+count($arr); // 4
+$strToArr = explode(",", "Item1,Item2,Item3"); // String to array
+$arrToStr = implode(",", ["SomeItem","AnotherItem"]); //array to String
+in_array('A',$arr); // returns true/false, to return index use array_search
+// Other methods like sort,array_push, array_pop, array_shift
+
+// Associative Array
+$person = [
+    'name' => 'Arjit',
+    'age' => 23
+]
+if(!isset($person['location'])) $person['location']= 'doon';
+//array_keys($person), array_values($person), ksort($person), asort($person)
+
+// Loops
+foreach($person as $k => $v){
+    echo $k.' '.$v;
+}
+
+//functions
+function hello($name){
+    echo "hi $name";
+}
+
+require "partials/headers.php" // gives error & stops code from execution
+include "partials/headers.php" // Doesnt give error
+// Can use include_once for efficiency
+
+// File System
+echo __DIR__; // prints current directory
+echo __FILE__; // prints current file
+file_exists('somefile.txt');
+echo file_get_contents('lorem.txt'); // prints content of file
+file_put_contents('lorem.txt','some new content'); // append content in file
+
+// Working with Json data
+$userJson = file_get_contents('https://someApiThatGivesJSONdata');
+$users = json_decode($userJson, true); // Change to associative array from json
+```
+
+## Backend stuff
+
+```php
+
+// CURL get request
+$url = 'https://jsonplaceholder.typicode.com/users';
+$resource = curl_init($url);
+curl_setopt($resource, CURLOPT_RETURNTRANSFER, true);
+$result = curl_exec($resource); // we get json data from api in result
+$info = curl_getinfo($resource,CURLINFO_HTTP_CODE); // to get different kinds of info
+curl_close($resource);
+
+
+// CURL post request
+$url = 'https://jsonplaceholder.typicode.com/users';
+$resource = curl_init();
+$user = [
+    'name' => 'Arjit Sharma',
+    'username' => 'arjit',
+    'email' => 'arjitsharma50@gmail.com'
+];
+curl_setopt_array($resource, [
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST => true,
+    CURLOPT_HTTPHEADER => ['content-type: application/json'],
+    CURLOPT_POSTFIELDS => json_encode($user)
+]);
+
+$result = curl_exec($resource);
+
+curl_close($resource);
+
+```
+
 # Object Oriented PHP
 
 ## Class Creation
@@ -528,113 +648,46 @@ foreach ($items as $item) {
 
 ?>
 
-## Language constructs
+## Working with CSV files
 
 ```php
-echo "<h1>Hello</h1>"
-
-// variables
-$name = "Arjit";
-
-// getType() to get type of variable or var_dump to print type with variable
-echo getType($name) // String
-var_dump($name) // string(5) "Arjit"
-
-//Note - In booleans, true is converted to 1, false is converted to empty string
-$n = true;
-echo $n;
-
-// Check if variable is defined
-isset($name) // true
-
-//Constants, some built in contants of PHP are SORT_ASC,PHP_INT_MAX ..
-define('PI',3.14);
-echo PI;
-
-// Conversion
-$str = '12.34';
-$n = (float)$str; // or using intval($str)
-
-// Strings
-$name = 'arjit';
-$sentence = "Hello I am $name."; // when using double quotes can write variable within it, instead of concatenating
-
-
-// Arrays
-$arr = ['A','B','C'];
-echo $arr[0]; // A
-$arr[] = 'D'; // Append a element
-count($arr); // 4
-$strToArr = explode(",", "Item1,Item2,Item3"); // String to array
-$arrToStr = implode(",", ["SomeItem","AnotherItem"]); //array to String
-in_array('A',$arr); // returns true/false, to return index use array_search
-// Other methods like sort,array_push, array_pop, array_shift
-
-// Associative Array
-$person = [
-    'name' => 'Arjit',
-    'age' => 23
-]
-if(!isset($person['location'])) $person['location']= 'doon';
-//array_keys($person), array_values($person), ksort($person), asort($person)
-
-// Loops
-foreach($person as $k => $v){
-    echo $k.' '.$v;
+<?php
+// Putting data in CSV file
+$students = array(
+    array('Arjit','Sharma','2000-02-18',10),
+    array('Shoto','Todoroki','2017-03-01',9),
+    array('Loofy','D Monkey','1997-12-04',10));
+$filename = './students.csv';
+$fh = fopen($filename,'w') or die("Can't open $filename");
+foreach ($students as $student) {
+if (fputcsv($fh, $student) === false) {
+die("Can't write CSV line");
 }
-
-//functions
-function hello($name){
-    echo "hi $name";
 }
+fclose($fh) or die("Can't close $filename");
 
-require "partials/headers.php" // gives error & stops code from execution
-include "partials/headers.php" // Doesnt give error
-// Can use include_once for efficiency
+// Getting data from CSV file
+$filename = './students.csv';
+$fp = fopen($filename,'r') or die("can't open file");
+print "<table>\n";
+while($csv_line = fgetcsv($fp)) {
+print '<tr>';
+for ($i = 0, $j = count($csv_line); $i < $j; $i++) {
+print '<td>'.htmlentities($csv_line[$i]).'</td>';
+}
+print "</tr>\n";
+}
+print "</table>\n";
+fclose($fp) or die("can't close file");
 
-// File System
-echo __DIR__; // prints current directory
-echo __FILE__; // prints current file
-file_exists('somefile.txt');
-echo file_get_contents('lorem.txt'); // prints content of file
-file_put_contents('lorem.txt','some new content'); // append content in file
 
-// Working with Json data
-$userJson = file_get_contents('https://someApiThatGivesJSONdata');
-$users = json_decode($userJson, true); // Change to associative array from json
+?>
 ```
 
-## Backend stuff
+## Web Fundamentals 
 
 ```php
+// COOKIES 
 
-// CURL get request
-$url = 'https://jsonplaceholder.typicode.com/users';
-$resource = curl_init($url);
-curl_setopt($resource, CURLOPT_RETURNTRANSFER, true);
-$result = curl_exec($resource); // we get json data from api in result
-$info = curl_getinfo($resource,CURLINFO_HTTP_CODE); // to get different kinds of info
-curl_close($resource);
-
-
-// CURL post request
-$url = 'https://jsonplaceholder.typicode.com/users';
-$resource = curl_init();
-$user = [
-    'name' => 'Arjit Sharma',
-    'username' => 'arjit',
-    'email' => 'arjitsharma50@gmail.com'
-];
-curl_setopt_array($resource, [
-    CURLOPT_URL => $url,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_POST => true,
-    CURLOPT_HTTPHEADER => ['content-type: application/json'],
-    CURLOPT_POSTFIELDS => json_encode($user)
-]);
-
-$result = curl_exec($resource);
-
-curl_close($resource);
 
 ```
