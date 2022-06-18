@@ -1,1 +1,2 @@
-# Mini Projects
+# Computer-Science-Primer
+Contains Notes for everything
