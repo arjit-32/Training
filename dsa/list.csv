@@ -1,5 +1,9 @@
 Problem, Difficulty, Type, Link, Solution, NP
-Print One To N, V.E, recursion, , coursework\dsa\recursion\1ToN.java, NP
-Print Encodings, M, recursion, https://www.pepcoding.com/resources/online-java-foundation/recursion-on-the-way-up/print-encodings-official/ojquestion, coursework\dsa\recursion\printEncodings.java, PP
+Print One To N, V.E, recursion, , dsa\problems\1ToN.java, NP
+Print Encodings, M, recursion, https://www.pepcoding.com/resources/online-java-foundation/recursion-on-the-way-up/print-encodings-official/ojquestion, coursework\dsa\problems\printEncodings.java, 2P
 Reverse String, E, recursion, https://leetcode.com/problems/reverse-string, https://leetcode.com/submissions/detail/721677818/, P
 Max Depth of Binary Tree, E, recursion, https://leetcode.com/problems/maximum-depth-of-binary-tree/, https://leetcode.com/submissions/detail/721687481/, NP 
+Sort Array with Recursion, M, recursion, , dsa\problems\sortArr.java, 2P
+Print digits of number with Recursion, E, recursion, ,dsa\problems\printDigits.java, NP
+Roatate a number, E, basic, https://nados.io/question/rotate-a-number, dsa\problems\rotateNumber.java, P
+
