@@ -1,0 +1,12 @@
+div{
+    background-color: rgb(238, 144, 144);
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
