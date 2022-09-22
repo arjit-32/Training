@@ -282,10 +282,15 @@ del d["year"]
 d.pop("year")
 ```
 
+## Lambda Functions 
 
+```
+// multiple args but 1 exprssn
+// lambda argumnet(s): expression
+sum_up = lambda a,b:a+b;
+sum_up()
 
-
-
+```
 
 
 ## Multiple Arguments
