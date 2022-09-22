@@ -117,6 +117,7 @@ a = "Hello, World!"
 print(a[1]) //e
 
 //Slicing
+a[start:stop:step]
 a[2:5] //llo
 a[-5:-2] //orl
 a[-1::-1] //Reversing(last parameter shows updation) !dlroW ,olleH
