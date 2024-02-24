@@ -1,5 +1,4 @@
-# Training in this repo
-Contains Notes for everything
-Mini projects 
-Coursework
-DSA
+# TrainingForTuringTribe
+
+Contains the code/examples/extra-notes/coursework I had to go through to build the Turing Tribe's training program.
+
