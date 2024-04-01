@@ -16,14 +16,37 @@ app.use(express.json());
 let numberOfRequestsForUser = {};
 setInterval(() => {
     numberOfRequestsForUser = {};
-}, 1000)
+}, 1000*60*60)
+
+app.use((req, res, next) => {
+    const userId = req.headers['user-id']; // get the user-id from the headers
+    if (!userId) {
+        res.status(404).json({ msg: 'user-id not found' });
+        return;
+    }
+    if (!numberOfRequestsForUser[userId]) {
+        numberOfRequestsForUser[userId] = 1;
+    } else {
+        numberOfRequestsForUser[userId]++; // increment the number of requests for the user
+    }
+    if (numberOfRequestsForUser[userId] > 5) {
+        res.status(404).json({ msg: 'rate limit exceeded' });
+        return;
+    }
+    next();
+});
+
 
 app.get('/user', function(req, res) {
-  res.status(200).json({ name: 'john' });
+  res.status(200).json({ name: 'john', numberOfRequestsForUser: numberOfRequestsForUser});
 });
 
 app.post('/user', function(req, res) {
   res.status(200).json({ msg: 'created dummy user' });
 });
 
-module.exports = app;
+// module.exports = app;
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
