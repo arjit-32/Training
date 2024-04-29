@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input class="title" type="text" placeholder="title"></input>
+        <input class="description" type="text" placeholder="description"></input>
+        <button class="add">add</button>
+    </div>
+
+    <div class="results">
+
+    </div>
+    <script>
+        function addTodo(){
+            let title = document.querySelector('.title').value
+            let description = document.querySelector('.description').value
+            let div = document.createElement('div')
+            div.innerHTML = `<h1>${title}</h1><p>${description}</p>`
+            div.innerHTML += `<button class="del">Done</button>`
+            document.querySelector('.results').appendChild(div)
+        }
+
+        document.querySelector('.add').addEventListener('click', addTodo);
+
+        document.querySelector('.results').addEventListener('click', function(e){
+            if(e.target.classList.contains('del')){
+                e.target.parentNode.remove()
+            }
+        })
+    </script>
+</body>
+</html>

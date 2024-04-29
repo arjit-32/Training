@@ -14,12 +14,15 @@ router.post('/signup', async (req, res) => {
         password: password
     })
 
-    adminDetails.save()
-    .then(data => res.send("Admin created successfully"))
-    .catch(err => res.send("Error creating a Admin"));
+    try {
+        await adminDetails.save();
+        res.send("Admin created successfully");
+    } catch (err) {
+        res.send("Error creating Admin");
+    }
 });
 
-router.post('/courses', adminMiddleware, (req, res) => {
+router.post('/courses', adminMiddleware, async (req, res) => {
     // Implement course creation logic
     const {id, title, description, price, imageLink} = req.body;
 
@@ -31,15 +34,18 @@ router.post('/courses', adminMiddleware, (req, res) => {
         imageLink: imageLink  
     })
 
-    courseDetails.save()
-        .then(data => res.send("Course created successfully"))
-        .catch(err => res.send("Error creating course"))
+    try{
+        await courseDetails.save();
+        res.send("Course created successfully");
+    }catch(err){
+        res.send("Error creating course");
+    }
 });
 
-router.get('/courses', adminMiddleware,async (req, res) => {
+router.get('/courses', adminMiddleware, async (req, res) => {
     // Implement fetching all courses logic
     const allCourses = await db.Course.find({});
-    console.log(allCourses);
+    
      res.json({
         allCourses: allCourses,
     });

@@ -16,7 +16,7 @@ const UserSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Course'
     }]
-});
+}); 
 
 const CourseSchema = new mongoose.Schema({
     id: Number,
