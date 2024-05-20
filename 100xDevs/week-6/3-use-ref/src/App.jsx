@@ -6,9 +6,9 @@ import { Testing } from './components/testing'
 function App() {
   return (
     <>
-    <Testing />
+    {/* <Testing /> */}
       {/* <Assignment1 /> */}
-      {/* <Assignment2 /> */}
+      <Assignment2 />
     </>
   )
 }

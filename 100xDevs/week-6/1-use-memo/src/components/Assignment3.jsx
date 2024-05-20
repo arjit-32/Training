@@ -4,15 +4,21 @@ import React, { useState, useMemo } from 'react';
 
 export const Assignment3 = () => {
     const [items, setItems] = useState([
-        { name: 'Chocolates', value: 10 },
-        { name: 'Chips', value: 20 },
-        { name: 'Onion', value: 30 },
-        { name: 'Tomato', value: 30 },
+        { name: 'Chocolates', value: 100 },
+        { name: 'Chips', value: 100 },
+        { name: 'Onion', value: 100 },
+        { name: 'Tomato', value: 100 },
         // Add more items as needed
     ]);
 
     // Your code starts here
-    const totalValue = 0;
+    const totalValue = useMemo( ()=> {
+        let tot=0;
+        items.forEach(item => {
+            tot+=item.value;
+        });
+        return tot;
+    }, [items]);
     // Your code ends here
     return (
         <div>

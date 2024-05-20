@@ -7,10 +7,10 @@ import { AssignmentSum } from './components/AssignmentSum'
 function App() {
   return (
     <>
-      <AssignmentSum />
+      {/* <AssignmentSum /> */}
       {/* <Assignment1 /> */}
       {/* <Assignment2 /> */}
-      {/* <Assignment3 /> */}
+      <Assignment3 />
     </>
   )
 }
